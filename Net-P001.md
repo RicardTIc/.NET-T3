@@ -3,9 +3,9 @@
 
 ###### Descrição: Lista de Comandos Para verificar se o .NET SDK está instalado corretamente
 ~~~ c#
-dotnet --version - Verifica a versão do .NET SDK instalada
-dotnet --list-sdks - Lista todas as versões do .NET SDK instaladas
-dotnet --list-runtimes - Lista todas as versões do .NET Runtime instaladas
+dotnet --version - Verifica a versão Dot .NET SDK instalada
+dotnet --list-sdks - Lista todas as versões Dot .NET SDK instaladas
+dotnet --list-runtimes - Lista todas as versões Dot .NET Runtime instaladas
 dotnet --uninstall-sdk <versão> - Remover uma versão específica
 dotnet --list-sdks e dotnet --install-sdk <versão> - Atualizar o .NET SDK
 
@@ -65,8 +65,6 @@ class Program
         Console.WriteLine($"Conversão para int (com casting): {numeroInteiro}");
     }
 }
-
- 
 ~~~
 
 ## 4. Operadores Aritméticos: ##
@@ -129,67 +127,103 @@ class Program
         }
     }
 }
-
 ~~~
 
 ## 6. Operadores de Igualdade: ##
 
 ~~~ c#
 
-    
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        // Strings
         string str1 = "Hello";
         string str2 = "World";
-    
-        bool saoIguais = (str1 == str2);
 
-        Console.WriteLine(saoIguais);
- 
+        // Verificar se as strings são iguais usando o método Equals
+        bool saoIguais = str1.Equals(str2);
+
+        // Exibir o resultado
+        if (saoIguais)
+        {
+            Console.WriteLine("As strings são iguais.");
+        }
+        else
+        {
+            Console.WriteLine("As strings são diferentes.");
+        }
+    }
+}
+
 ~~~
 
 ## 7. Operadores Lógicos: ##
 
-
 ~~~ c#
+ using System;
 
+class Program
+{
+    static void Main()
+    {
+        // Variáveis booleanas
+        bool condicao1 = true;
+        bool condicao2 = false;
 
-        
-        bool c1 = true;
-        bool c2 = false;
-
-        // Verificar se ambas as condições são verdadeiras
-        bool saoTrue = c1 && c2;
-
-   
-        Console.WriteLine(saoTrue);
-        // A saida é False
+        // Verificar se ambas as condições são verdadeiras usando &&
+        if (condicao1 && condicao2)
+        {
+            Console.WriteLine("Ambas as condições são verdadeiras.");
+        }
+        else
+        {
+            Console.WriteLine("Pelo menos uma das condições é falsa.");
+        }
+    }
+}
 ~~~
 
 ## 8. Desafio de Mistura de Operadores: ##
 
 ~~~ c#
-        int n1 = 7;
-        int n2 = 3;
-        int n3 = 10;
+        using System;
 
-        // Verificar se n1 é maior que n2
-        bool n1MaiorQueN2 = n1 > n2;
+class Program
+{
+    static void Main()
+    {
+        // Variáveis
+        int num1 = 7;
+        int num2 = 3;
+        int num3 = 10;
 
-        // Verificar se n3 é igual a n1 + n2
-        bool n3IgualSomaN1N2 = n3 == (n1 + n2);
+        // Verificar se num1 é maior do que num2
+        bool condicao1 = num1 > num2;
 
-         
-        Console.WriteLine($"num1 é maior que num2: {n1MaiorQueN2}");
-        Console.WriteLine($"num3 é igual a num1 + num2: {n3IgualSomaN1N2}");
-        // A saída é True para as duas comparações
-~~~ 
+        // Verificar se num3 é igual a num1 + num2
+        bool condicao2 = num3 == num1 + num2;
 
+        // Exibir os resultados
+        if (condicao1)
+        {
+            Console.WriteLine("num1 é maior do que num2.");
+        }
+        else
+        {
+            Console.WriteLine("num1 não é maior do que num2.");
+        }
 
-
-
-
-
-
-
-
-
-
+        if (condicao2)
+        {
+            Console.WriteLine("num3 é igual a num1 + num2.");
+        }
+        else
+        {
+            Console.WriteLine("num3 não é igual a num1 + num2.");
+        }
+    }
+}
+~~~
