@@ -71,31 +71,36 @@ class Program
 
 ## 4. Operadores Aritméticos: ##
  
-
-
 ~~~ c#
+
 using System;
 
-
+class Program
+{
+    static void Main()
+    {
         // Variáveis
         int x = 10;
         int y = 3;
 
         // Adição
-        int adicao = x + y;
-        Console.WriteLine($"Adição: {adicao}"); // $  e {} é usado para concatenar a string com o valor.
+        int soma = x + y;
+        Console.WriteLine($"Adição: {x} + {y} = {soma}");
 
         // Subtração
-        int subtracao = x - y;
-        Console.WriteLine($"Subtração: {subtracao}");
+        int diferenca = x - y;
+        Console.WriteLine($"Subtração: {x} - {y} = {diferenca}");
 
         // Multiplicação
-        int multiplicacao = x * y;
-        Console.WriteLine($"Multiplicação: {multiplicacao}");
+        int produto = x * y;
+        Console.WriteLine($"Multiplicação: {x} * {y} = {produto}");
 
-        // Divisão
-        int divisao = x / y;
-        Console.WriteLine($"Divisão: {divisao}");
+        // Divisão (observe que a divisão de inteiros resulta em um inteiro)
+        int quociente = x / y;
+        Console.WriteLine($"Divisão: {x} / {y} = {quociente}");
+    }
+}
+
 
 ~~~
 
