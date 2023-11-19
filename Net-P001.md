@@ -46,19 +46,26 @@ class Program
 
 ## 3. Conversão de Tipos de Dados: ##
 
-##### Para converter um 'double' para 'int' so é usar um casting, mas o problema é que a parte fracionaria seria perdida #####
+Resposta: Ao usar um casting para converter um double para int em C#, a parte fracionária é perdida, e apenas a parte inteira do número é mantida. Exemplos
 
 ~~~ c#
 
+class Program
+{
+    static void Main()
+    {
         // Variável double com parte fracionária
-        double myDouble = 10.75;
+        double numeroDouble = 10.75;
 
-        // Conversão usando casting (truncando a parte fracionária)
-        int myInteiro = (int)myDouble;
+        // Conversão com casting para int (parte fracionária é perdida)
+        int numeroInteiro = (int)numeroDouble;
 
-        // Saída
-        Console.WriteLine($"Double: {myDouble}");
-        Console.WriteLine($"Inteiro após conversão: {myInteiro}");
+        // Exibindo os resultados
+        Console.WriteLine($"Número double: {numeroDouble}");
+        Console.WriteLine($"Conversão para int (com casting): {numeroInteiro}");
+    }
+}
+
  
 ~~~
 
