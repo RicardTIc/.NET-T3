@@ -3,9 +3,9 @@
 
 ###### Descrição: Lista de Comandos Para verificar se o .NET SDK está instalado corretamente
 ~~~ c#
-dotnet --version - Verifica a versão do .NET SDK instalada
-dotnet --list-sdks - Lista todas as versões do .NET SDK instaladas
-dotnet --list-runtimes - Lista todas as versões do .NET Runtime instaladas
+dotnet --version - Verifica a versão Dot .NET SDK instalada
+dotnet --list-sdks - Lista todas as versões Dot .NET SDK instaladas
+dotnet --list-runtimes - Lista todas as versões Dot .NET Runtime instaladas
 dotnet --uninstall-sdk <versão> - Remover uma versão específica
 dotnet --list-sdks e dotnet --install-sdk <versão> - Atualizar o .NET SDK
 
@@ -46,49 +46,59 @@ class Program
 
 ## 3. Conversão de Tipos de Dados: ##
 
-##### Para converter um 'double' para 'int' so é usar um casting, mas o problema é que a parte fracionaria seria perdida #####
+Resposta: Ao usar um casting para converter um double para int em C#, a parte fracionária é perdida, e apenas a parte inteira do número é mantida. Exemplos
 
 ~~~ c#
 
+class Program
+{
+    static void Main()
+    {
         // Variável double com parte fracionária
-        double myDouble = 10.75;
+        double numeroDouble = 10.75;
 
-        // Conversão usando casting (truncando a parte fracionária)
-        int myInteiro = (int)myDouble;
+        // Conversão com casting para int (parte fracionária é perdida)
+        int numeroInteiro = (int)numeroDouble;
 
-        // Saída
-        Console.WriteLine($"Double: {myDouble}");
-        Console.WriteLine($"Inteiro após conversão: {myInteiro}");
- 
+        // Exibindo os resultados
+        Console.WriteLine($"Número double: {numeroDouble}");
+        Console.WriteLine($"Conversão para int (com casting): {numeroInteiro}");
+    }
+}
 ~~~
 
 ## 4. Operadores Aritméticos: ##
  
-
-
 ~~~ c#
+
 using System;
 
-
+class Program
+{
+    static void Main()
+    {
         // Variáveis
         int x = 10;
         int y = 3;
 
         // Adição
-        int adicao = x + y;
-        Console.WriteLine($"Adição: {adicao}"); // $  e {} é usado para concatenar a string com o valor.
+        int soma = x + y;
+        Console.WriteLine($"Adição: {x} + {y} = {soma}");
 
         // Subtração
-        int subtracao = x - y;
-        Console.WriteLine($"Subtração: {subtracao}");
+        int diferenca = x - y;
+        Console.WriteLine($"Subtração: {x} - {y} = {diferenca}");
 
         // Multiplicação
-        int multiplicacao = x * y;
-        Console.WriteLine($"Multiplicação: {multiplicacao}");
+        int produto = x * y;
+        Console.WriteLine($"Multiplicação: {x} * {y} = {produto}");
 
-        // Divisão
-        int divisao = x / y;
-        Console.WriteLine($"Divisão: {divisao}");
+        // Divisão (observe que a divisão de inteiros resulta em um inteiro)
+        int quociente = x / y;
+        Console.WriteLine($"Divisão: {x} / {y} = {quociente}");
+    }
+}
+
 
 ~~~
 
@@ -96,10 +106,17 @@ using System;
 
 ~~~ c#
     
+ using System;
+
+class Program
+{
+    static void Main()
+    {
+        // Variáveis
         int a = 5;
         int b = 8;
 
-        // Verificar se a é maior que b
+        // Verificar se 'a' é maior que 'b'
         if (a > b)
         {
             Console.WriteLine("a é maior que b.");
@@ -108,67 +125,105 @@ using System;
         {
             Console.WriteLine("a não é maior que b.");
         }
- 
+    }
+}
 ~~~
 
 ## 6. Operadores de Igualdade: ##
 
 ~~~ c#
 
-    
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        // Strings
         string str1 = "Hello";
         string str2 = "World";
-    
-        bool saoIguais = (str1 == str2);
 
-        Console.WriteLine(saoIguais);
- 
+        // Verificar se as strings são iguais usando o método Equals
+        bool saoIguais = str1.Equals(str2);
+
+        // Exibir o resultado
+        if (saoIguais)
+        {
+            Console.WriteLine("As strings são iguais.");
+        }
+        else
+        {
+            Console.WriteLine("As strings são diferentes.");
+        }
+    }
+}
+
 ~~~
 
 ## 7. Operadores Lógicos: ##
 
-
 ~~~ c#
+ using System;
 
+class Program
+{
+    static void Main()
+    {
+        // Variáveis booleanas
+        bool condicao1 = true;
+        bool condicao2 = false;
 
-        
-        bool c1 = true;
-        bool c2 = false;
-
-        // Verificar se ambas as condições são verdadeiras
-        bool saoTrue = c1 && c2;
-
-   
-        Console.WriteLine(saoTrue);
-        // A saida é False
+        // Verificar se ambas as condições são verdadeiras usando &&
+        if (condicao1 && condicao2)
+        {
+            Console.WriteLine("Ambas as condições são verdadeiras.");
+        }
+        else
+        {
+            Console.WriteLine("Pelo menos uma das condições é falsa.");
+        }
+    }
+}
 ~~~
 
 ## 8. Desafio de Mistura de Operadores: ##
 
 ~~~ c#
-        int n1 = 7;
-        int n2 = 3;
-        int n3 = 10;
+        using System;
 
-        // Verificar se n1 é maior que n2
-        bool n1MaiorQueN2 = n1 > n2;
+class Program
+{
+    static void Main()
+    {
+        // Variáveis
+        int num1 = 7;
+        int num2 = 3;
+        int num3 = 10;
 
-        // Verificar se n3 é igual a n1 + n2
-        bool n3IgualSomaN1N2 = n3 == (n1 + n2);
+        // Verificar se num1 é maior do que num2
+        bool condicao1 = num1 > num2;
 
-         
-        Console.WriteLine($"num1 é maior que num2: {n1MaiorQueN2}");
-        Console.WriteLine($"num3 é igual a num1 + num2: {n3IgualSomaN1N2}");
-        // A saída é True para as duas comparações
-~~~ 
+        // Verificar se num3 é igual a num1 + num2
+        bool condicao2 = num3 == num1 + num2;
 
+        // Exibir os resultados
+        if (condicao1)
+        {
+            Console.WriteLine("num1 é maior do que num2.");
+        }
+        else
+        {
+            Console.WriteLine("num1 não é maior do que num2.");
+        }
 
-
-
-
-
-
-
-
-
-
+        if (condicao2)
+        {
+            Console.WriteLine("num3 é igual a num1 + num2.");
+        }
+        else
+        {
+            Console.WriteLine("num3 não é igual a num1 + num2.");
+        }
+    }
+}
+~~~
