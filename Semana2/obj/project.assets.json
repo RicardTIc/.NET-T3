@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\cat-r\\Documents\\GitHub\\.NET-T3\\Semana2\\Net-P002.csproj",
-      "projectName": "Net-P002",
-      "projectPath": "c:\\Users\\cat-r\\Documents\\GitHub\\.NET-T3\\Semana2\\Net-P002.csproj",
+      "projectUniqueName": "C:\\Users\\cat-r\\Documents\\GitHub\\.NET-T3\\Semana2\\P002 (3).csproj",
+      "projectName": "P002 (3)",
+      "projectPath": "C:\\Users\\cat-r\\Documents\\GitHub\\.NET-T3\\Semana2\\P002 (3).csproj",
       "packagesPath": "C:\\Users\\cat-r\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\cat-r\\Documents\\GitHub\\.NET-T3\\Semana2\\obj\\",
+      "outputPath": "C:\\Users\\cat-r\\Documents\\GitHub\\.NET-T3\\Semana2\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\cat-r\\AppData\\Roaming\\NuGet\\NuGet.Config"
