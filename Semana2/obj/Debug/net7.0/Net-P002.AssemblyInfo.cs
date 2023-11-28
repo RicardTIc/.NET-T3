@@ -13,7 +13,11 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Net-P002")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
+<<<<<<< Updated upstream
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8c5ccd7050bebe62180d6a4308e73b1add302f9b")]
+=======
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b4b7da87b1f4a34fec2f7535aa5c2cea04f6e578")]
+>>>>>>> Stashed changes
 [assembly: System.Reflection.AssemblyProductAttribute("Net-P002")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Net-P002")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
